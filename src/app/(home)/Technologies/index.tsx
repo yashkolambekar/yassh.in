@@ -9,6 +9,7 @@ const Technologies = () => {
         {tech.map((item, index) => {
           return (
             <Image
+              key={index}
               src={item.image}
               width={200}
               height={200}

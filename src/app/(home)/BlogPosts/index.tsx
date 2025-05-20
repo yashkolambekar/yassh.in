@@ -8,7 +8,7 @@ const BlogPost = () => {
       <div className="mt-[2em]">
         {posts.map((item, index) => {
           return (
-            <div className="mt-[1em] opacity-75 hover:opacity-100 cursor-pointer">
+            <div key={index} className="mt-[1em] opacity-75 hover:opacity-100 cursor-pointer">
               <p className="text-[1.2em] w-[70%] " >{item.title}</p>
               <p className="opacity-40">{item.date}</p>
             </div>
