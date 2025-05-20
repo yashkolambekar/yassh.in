@@ -1,5 +1,9 @@
 const tech = [
     {
+        image: "/icons/app-coolify.png",
+        title: "Coolify",
+    },
+    {
         image: "/icons/linux-svgrepo-com.svg",
         title: "Linux",
     },
@@ -14,6 +18,18 @@ const tech = [
     {
         image: "/icons/zustand-logo.svg",
         title: "Zustand",
+    },
+    {
+        image: "/icons/prisma-svgrepo-com.svg",
+        title: "Prisma",
+    },
+    {
+        image: "/icons/postgresql-svgrepo-com.svg",
+        title: "PostgreSQL",
+    },
+    {
+        image: "/icons/tailwind-svgrepo-com.svg",
+        title: "Tailwind CSS",
     },
 ]
 
