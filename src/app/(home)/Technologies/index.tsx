@@ -8,7 +8,7 @@ const Technologies = () => {
       <div className="mt-[2em] flex gap-[0.7em] flex-wrap">
         {tech.map((item, index) => {
           return (
-            <div className="group flex items-center justify-center px-[1.2em] py-[0.6em] bg-[rgba(255,255,255,0.025)] rounded-xl border-[0.15em] border-[rgba(255,255,255,0.1)] hover:border-[rgba(255,255,255,0.2)] transition-all duration-200 ease-in-out">
+            <div key={item.title} className="group flex items-center justify-center px-[1.2em] py-[0.6em] bg-[rgba(255,255,255,0.025)] rounded-xl border-[0.15em] border-[rgba(255,255,255,0.1)] hover:border-[rgba(255,255,255,0.2)] transition-all duration-200 ease-in-out">
               <Image
                 key={index}
                 src={item.image}
