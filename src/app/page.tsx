@@ -8,8 +8,8 @@ import Experience from "./(home)/Experience";
 export default function Home() {
   return (
     <div className="flex flex-col items-center  min-h-screen">
-      <div className="flex flex-col w-full min-h-screen max-w-[80em] py-10">
-        <div className="w-full flex gap-[5em]">
+      <div className="flex flex-col w-full min-h-screen max-w-[80em] p-6 md:p-10">
+        <div className="w-full flex flex-col md:flex-row gap-[5em]">
           <PersonalInfoSidebar />
           <div className="w-full h-[10em]">
             <BlogPost />

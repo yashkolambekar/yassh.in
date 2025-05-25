@@ -9,7 +9,7 @@ const BlogPost = () => {
         {posts.map((item, index) => {
           return (
             <div key={index} className="mt-[1em] opacity-75 hover:opacity-100 cursor-pointer">
-              <p className="text-[1.2em] w-[70%] " >{item.title}</p>
+              <p className="text-[1.2em] w-full md:w-[70%] " >{item.title}</p>
               <p className="opacity-40">{item.date}</p>
             </div>
           );
