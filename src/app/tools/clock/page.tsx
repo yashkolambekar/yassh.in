@@ -6,26 +6,27 @@ import "./clock.css";
 
 function App() {
   // create a state for the current time
-  const [date, setDate] = useState(new Date());
+  const [time, setTime] = useState<string[]>(['0', '0', '0', '0', '0', '0']);
 
   // set up interval to update time every second
   useEffect(() => {
     const interval = setInterval(() => {
-      setDate(new Date());
+      const date = new Date();
+      const hours = String(date.getHours()).padStart(2, '0');
+      const minutes = String(date.getMinutes()).padStart(2, '0');
+      const seconds = String(date.getSeconds()).padStart(2, '0');
+      const time = [hours[0], hours[1], minutes[0], minutes[1], seconds[0], seconds[1]];
+      setTime(time);
     }, 1000);
     return () => clearInterval(interval);
   }, []);
 
   // get current time digits
-  const hours = String(date.getHours()).padStart(2, '0');
-  const minutes = String(date.getMinutes()).padStart(2, '0');
-  const seconds = String(date.getSeconds()).padStart(2, '0');
-  const time = [hours[0], hours[1], minutes[0], minutes[1], seconds[0], seconds[1]];
 
   return (
     <>
       <div className="min-h-screen w-full flex flex-col items-center justify-center bg-[#131313] text-white">
-        <div className='flex flex-row flex-wrap gap-[3em] transition-all duration-500 ease-in-out'>
+        <div className='flex flex-row flex-wrap gap-[3em] transition-all duration-500 ease-in-out  text-[0.3em] md:text-[0.5em] lg:text-[1em]'>
           <div className='flex flex-row'>
             <Digit char={time[0]} />
             <Digit char={time[1]} />
